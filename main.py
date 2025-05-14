@@ -1,3 +1,4 @@
+
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -51,7 +52,7 @@ def buscar(request: Request):
 
     if "link" in filtrado.columns:
         filtrado["Nombre del Libro"] = filtrado.apply(
-            lambda row: f'<a href="{row["link"]}" target="_blank">{row["Nombre del Libro"]}</a>' if pd.notna(row["Nombre del Libro"]) and pd.notna(row["link"]) else row["Nombre del Libro"],
+            lambda row: f'<a href="{row["link"]}" target="_blank">{row["Nombre del Libro"]}</a>' if pd.notna(row["link"]) else row["Nombre del Libro"],
             axis=1
         )
 
