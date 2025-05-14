@@ -62,7 +62,7 @@ def buscar(request: Request):
     total_filtrado = len(filtrado)
 
     paginado = filtrado.iloc[start:start + length]
-    data = paginado[["Nombre del Libro", "Autor", "PÁGINA"]].to_dict(orient="records")
+    data = paginado[["Nombre del Libro", "Autor", "PÁGINAS"]].to_dict(orient="records")
 
     json_data = json.dumps({
         "draw": draw,
