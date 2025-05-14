@@ -50,9 +50,9 @@ def buscar(request: Request):
 
     filtrado = df[f1 & f2].copy()
 
-    if "link" in filtrado.columns:
+    if "Link" in filtrado.columns:
         filtrado["Nombre del Libro"] = filtrado.apply(
-            lambda row: f'<a href="{row["link"]}" target="_blank">{row["Nombre del Libro"]}</a>' if pd.notna(row["link"]) else row["Nombre del Libro"],
+            lambda row: f'<a href="{row["Link"]}" target="_blank">{row["Nombre del Libro"]}</a>' if pd.notna(row["Link"]) else row["Nombre del Libro"],
             axis=1
         )
 
