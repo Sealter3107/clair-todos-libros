@@ -144,7 +144,7 @@
             <tr>
                 <th>Nombre del Libro</th>
                 <th>Autor</th>
-                <th>PÁGINA</th>
+                <th>PÁGINAS</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -192,9 +192,9 @@
             data.data.forEach(row => {
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
-                    <td>${row["Nombre del Libro"] || ""}</td>
-                    <td>${row["Autor"] || ""}</td>
-                    <td>${row["PÁGINA"] || ""}</td>
+                    <td>${row["Nombre del Libro"]}</td>
+                    <td>${row["Autor"]}</td>
+                    <td>${row["PÁGINAS"]}</td>
                 `;
                 tbody.appendChild(tr);
             });
